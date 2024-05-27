@@ -1,19 +1,97 @@
 <!DOCTYPE html>
+<!--suppress CheckImageSize -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone Projects</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Website</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .gradient-background {
+            background: linear-gradient(300deg, #D36D00,#B15B00, #DC7300, #8F4A00);
+            background-size: 180% 180%;
+            animation: gradient-animation 8s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+
+    </style>
 </head>
 <body>
-    <h1>Sarthak Awasthi's Capstone Projects</h1>
-    <hr>
-    <h2>Web Development</h2>
-    <h3>HTML</h3>
-    <ul>
-        <li>
-            <a href="./Capstone 1/index.html">Resume</a>
-        </li>
-    </ul>
+<div class="container-fluid gradient-background">
+    <div class="container">
+        <section class="header">
+            <div class="container">
+                <header class="d-flex justify-content-center py-3">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page" style="background-color: black">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" style="color: black">Web Development</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" style="color: black">App Development</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" style="color: black">Game Development</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" style="color: black">Others</a></li>
+                    </ul>
+                </header>
+            </div>
+        </section>
+        <section class="Index">
+            <div class="container px-4 py-5" id="hanging-icons">
+                <h2 class="pb-2 border-bottom">Sarthak Awasthi's Capstone Project Highlights</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+                    <div class="col d-flex align-items-start">
+
+                        <div>
+                            <h3 class="fs-2 text-body-emphasis">Portfolio 1.0</h3>
+                            <p>A basic portfolio made using HTML only to practice the fundamentals</p>
+                            <a href="./Web%20Development/Capstone%201/index.html" class="btn btn-primary btn-dark">
+                                View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+
+                        <div>
+                            <h3 class="fs-2 text-body-emphasis">PortFolio 2.0</h3>
+                            <p>Portfolio Made using both HTML and CSS</p>
+                            <a href="./Web%20Development/Capstone%202/index.html" class="btn btn-primary btn-dark">
+                                View
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+
+                        <div>
+                            <h3 class="fs-2 text-body-emphasis">Coming Soon</h3>
+                            <p>Something Amazing</p>
+                            <a href="#" class="btn btn-primary btn-dark">
+                                Will Add the link here
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class=footer">
+            <section class="footer">
+                <footer class="py-3 mt-4">
+                    <p class="text-center text-body-secondary border-top">© Shresth Sarthak Awasthi</p>
+                </footer>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
