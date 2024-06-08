@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs")%>
+<% switch (locals.page) {
+case "World" : %>
+<%-include("pages/world.ejs")%>
+<% break;
+case "US" : %>
+<%-include("pages/us.ejs")%>
+<% break;
+case "Technology" : %>
+<%-include("pages/technology.ejs")%>
+<% break;
+case "Design" : %>
+<%-include("pages/design.ejs")%>
+<% break;
+case "Culture" : %>
+<%-include("pages/culture.ejs")%>
+<% break;
+case "Business" : %>
+<%-include("pages/business.ejs")%>
+<% break;
+case "Politics" : %>
+<%-include("pages/politics.ejs")%>
+<% break;
+case "Opinion" : %>
+<%-include("pages/opinion.ejs")%>
+<% break;
+case "Science" : %>
+<%-include("pages/science.ejs")%>
+<% break;
+case "Health" : %>
+<%-include("pages/health.ejs")%>
+<% break;
+case "Style" : %>
+<%-include("pages/style.ejs")%>
+<% break;
+case "Travel" : %>
+<%-include("pages/travel.ejs")%>
+<% break;
+case "Post" : %>
+<%-include("pages/createPost.ejs")%>
+<% break;
+case "Edit" : %>
+<%-include("pages/editPost.ejs")%>
+<% break;
+case "Select" : %>
+<%-include("pages/editSelector.ejs")%>
+<% break;
+} %>
+<%- include("partials/footer.ejs")%>

@@ -1,0 +1,35 @@
+<div class="nav-scroller py-1 mb-3 border-bottom">
+    <nav class="nav nav-underline justify-content-between">
+        <a class="nav-item nav-link link-body-emphasis " href="/world" >World</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/us">U.S.</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/technology">Technology</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/design">Design</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/culture">Culture</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/business">Business</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/politics">Politics</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/opinion">Opinion</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/science">Science</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/health">Health</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/style">Style</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/travel">Travel</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/createPost">Create</a>
+        <a class="nav-item nav-link link-body-emphasis active" href="/editPost">Edit</a>
+    </nav>
+</div>
+<div class="form-container mx-auto">
+    <form action="/darkPost" method="post">
+        <h1 class="text-center">Blog Select Form</h1>
+
+        <div>
+            <label for="BlogChoices">Choose The Blog:</label>
+            <select class="form-control" id="BlogChoices" name="Blogs" required>
+                <option value="">Select the Blog</option>
+                <% locals.blogposts.forEach(blogPost => { %>
+                    <option value="<%= blogPost.title %>"><%= blogPost.title %></option>
+                <% }); %>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-custom btn-block">Submit</button>
+    </form>
+
+</div>

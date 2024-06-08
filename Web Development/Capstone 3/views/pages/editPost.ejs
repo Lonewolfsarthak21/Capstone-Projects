@@ -1,0 +1,84 @@
+<div class="nav-scroller py-1 mb-3 border-bottom">
+    <nav class="nav nav-underline justify-content-between">
+        <a class="nav-item nav-link link-body-emphasis " href="/world" >World</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/us">U.S.</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/technology">Technology</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/design">Design</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/culture">Culture</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/business">Business</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/politics">Politics</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/opinion">Opinion</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/science">Science</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/health">Health</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/style">Style</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/travel">Travel</a>
+        <a class="nav-item nav-link link-body-emphasis active" href="/createPost">Create</a>
+        <a class="nav-item nav-link link-body-emphasis " href="/editPost">Edit</a>
+    </nav>
+</div>
+<div class="container">
+    <div class="form-container mx-auto">
+        <form id="updateForm" action="/updatePost" method="post">
+            <h1 class="text-center">Blog Edit Form</h1>
+
+            <div class="form-group">
+                <label for="title">Title of the Blog:</label>
+                <input type="text" class="form-control" id="title" name="title" value="<%=locals.selectedBlog.title%>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date of the Blog:</label>
+                <input type="date" class="form-control" id="date" name="date" value="<%=locals.selectedBlog.date%>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="author">Author of the Blog:</label>
+                <input type="text" class="form-control" id="author" name="author" value="<%=locals.selectedBlog.author%>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Add Image:</label>
+                <input type="file" class="form-control-file" id="image" name="image" value="<%=locals.selectedBlog.image%>" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="abstract">Abstract of the Blog:</label>
+                <textarea class="form-control" id="abstract" name="abstract" rows="3"  required>
+                    <%=locals.selectedBlog.abstract%>
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="brief">Brief of the Blog:</label>
+                <textarea class="form-control" id="brief" name="brief" rows="5"  required>
+                    <%=locals.selectedBlog.brief%>
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="subtopicsToModify">Number of Subtopics:</label>
+                <select class="form-control" id="subtopicsToModify" name="subtopics" required>
+                    <option value="">Select number of subtopics</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+
+            <div id="subtopicFields"></div>
+
+            <div class="form-group">
+                <label for="summary">Summary of the Blog:</label>
+                <textarea class="form-control" id="summary" name="summary" rows="3"  required>
+                    <%=locals.selectedBlog.summary%>
+                </textarea>
+            </div>
+
+            <button type="submit" class="btn btn-custom btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
